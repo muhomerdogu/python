@@ -1,0 +1,33 @@
+a=float(input("ilk kenarı gir:"))
+b=float(input("ikinci kenarı gir:"))
+c=float(input("üçüncü kenarı gir:"))
+
+if ((abs(b-c))<a) and (a<(abs(b+c))):
+    if(a==b and b==c):
+        print("Eşit üçgen elde ettik ve üçgenin kenar uzunluğu: ",a)
+    elif ((a==b) and (b!=c)) or ((a==c) and (a!=b)) or ((b==c) and (a!=b)):
+        print("Üçgenimiz ikizkenar üçgendir")
+    elif((a!=b) and (b!=c)):
+        print("Üçgenimzi çeşit kenar üçgendir.")
+    else:
+        print("tanımlanmayan bir şey yaptınız.")
+elif(abs(a-c)<b) and (b<(abs(a+c))):
+    if (a == b and b == c):
+        print("Eşit üçgen elde ettik ve üçgenin kenar uzunluğu: ", a)
+    elif ((a == b) and (b != c)) or ((a == c) and (a != b)) or ((b == c) and (a != b)):
+        print("Üçgenimiz ikizkenar üçgendir")
+    elif ((a !=b) and (b !=c)):
+        print("Üçgenimzi çeşit kenar üçgendir.")
+    else:
+        print("tanımlanmayan bir şey yaptınız.")
+elif(abs(a-b)<c) and (c<(abs(a+b))):
+    if (a == b and b == c):
+        print("Eşit üçgen elde ettik ve üçgenin kenar uzunluğu: ", a)
+    elif ((a == b) and (b != c)) or ((a == c) and (a != b)) or ((b == c) and (a != b)):
+        print("Üçgenimiz ikizkenar üçgendir")
+    elif ((a !=b) and (b !=c)):
+        print("Üçgenimzi çeşit kenar üçgendir.")
+    else:
+        print
+else:
+    print("bir şeyler yanlış gitti.")
