@@ -1,0 +1,83 @@
+# -*- coding: utf-8 -*-
+"""
+Spyder Editor
+
+This is a temporary script file.
+""" 
+
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as ps
+#kodlara veri yükleme
+veriler=ps.read_csv('eksikveriler.csv')
+print(veriler)
+boy=veriler[['boy']]
+print(boy)
+boyKilo=veriler[['boy','kilo']]
+print(boyKilo)
+x=10
+
+class insan: 
+    boy=179
+    def kosmak(self,b):
+        return b*1000;
+omer=insan()
+print(omer.boy)
+print(omer.kosmak(1000),"koşar")
+
+
+#imputer töhmet manasındaıdr. 
+from sklearn.preprocessing import Imputer 
+imputer=Imputer(missing_values='NaN', strategy='mean', axis=0)
+# boş değerleri ortalaması al ve yazdır. Sayısal olmayan üzerinde imputer çaışmazç  
+Yas=veriler.iloc[:,1:4].values
+print(Yas)
+imputer=imputer.fit(Yas[:,1:4])
+Yas[:,1:4]=imputer.transform(Yas[:,1:4])
+print(Yas)
+
+ulke=veriler.iloc[:,0:1].values  #BÜTÜN SATIARLARI AL BUNLARDAN DA 0 1 ARASINI AL. 
+print(ulke)
+
+from sklearn.preprocessing import LabelEncoder
+le=LabelEncoder() #bir obje tanımladık. 
+ulke[:,0]=le.fit_transform(ulke[:,0])
+print(ulke)
+ 
+from sklearn.preprocessing import OneHotEncoder
+ohe=OneHotEncoder(categorical_features='all')
+ulke=ohe.fit_transform(ulke).toarray()
+print(ulke)
+
+
+#data frame oluşturalımç. pandas kütüphanesinden gelir. 
+print(list(range(22)))
+
+sonuc=ps.DataFrame(data=ulke,index=range(22),columns=['fr','tr','us'])  #en son ulke gelsin.   #bir obje oluşturmaktadır. 
+#dataframe en büyük farklı ise bir index verilecek.kaçıncı sırada olduğunu gösterecke. bir indexsi srıası var. en büyük farklıarı bunlar. 
+print(sonuc)
+
+sonuc2=ps.DataFrame(data=Yas,index=range(22),columns=['boy','kilo','yas'])
+print(sonuc2)
+
+cinsiyet=veriler.iloc[:,-1:].values
+print(cinsiyet)
+
+sonuc3=ps.DataFrame(data=cinsiyet, index=range(22),columns=['cinsiyet'])
+
+s=ps.concat([sonuc,sonuc2],axis=1)
+print(s)
+
+s2=ps.concat([sonuc,sonuc2],axis=1) #concat 2 tane dataframe birlieştiri.
+
+print(s2)
+
+s3=ps.concat([s,sonuc3],axis=1)
+print(s3)
+
+
+from sklearn.cross_validation import train_test_split
+x_train, x_test,y_train, y_test=train_test_split(s,sonuc3,test_size=0.33, random_state=0)
+
+
+
