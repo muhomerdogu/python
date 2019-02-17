@@ -1,0 +1,49 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Feb 17 14:52:20 2019
+
+@author: OMERDOGU
+"""
+
+#kuracağımız modelde satış tahmini kuracağız. y=ax+b biz Bütün bunları hedeflemek mümkün olmayabilir. Modelimzde bize
+#basit doğrusal regrassion: y=ax+b doğru çizme fikrini veriler üzerinde çizmeyi hedefliyor diyebiliriz. 
+#video 19
+#dosyayı indiriyorum. 
+
+#kütüphaneleri yükledim. 
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+#2.Veri ÖnİŞLEME KISMINDAYIZ. 
+data=pd.read_csv('satislar.csv')
+
+print(data)
+
+aylar=data [['Aylar']]
+
+print(aylar)
+
+satislar=data[['Satislar']]
+
+print(satislar)
+
+satislar2=data.iloc[:,:1].values #iloc iledata içinden 1 coloum al.  
+print(satislar2) #2 ayri dataframe olarak geldi. 
+
+
+#verilerin eğitim ve test için bölünmesi 
+
+from sklearn.cross_validation import train_test_split
+x_train,x_test,y_train,y_test=train_test_split(aylar,satislar,test_size=0.33, random_state=0)
+
+
+#verileri ölçeklenmesi 
+from sklearn.preprocessing import StandardScaler #standardize ettik. ve standadart dışını gördük. 
+sc=StandardScaler()
+X_train=sc.fit_transform(x_train)
+X_test=sc.fit_transform(x_test)
+
+
+
+#Prof.Dr. Sadi Evren Şekerden alınmıştır. 
