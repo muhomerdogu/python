@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+ # -*- coding: utf-8 -*-
 """
 Created on Sun Feb 17 14:52:20 2019
 
@@ -43,7 +43,44 @@ from sklearn.preprocessing import StandardScaler #standardize ettik. ve standada
 sc=StandardScaler()
 X_train=sc.fit_transform(x_train)
 X_test=sc.fit_transform(x_test)
+Y_train=sc.fit_transform(y_train)
+Y_test=sc.fit_transform(y_test) #Standardizasyonun en büyük amacı verileri aynı dünyaya indirgemektir. 
+#train bağımlı ve bağımsız gruptan oluşmaktadır. Veiyi ön işleme aşaması bitit. Kullanacağımız kütüphane de python de yer alan sklearn kullanacağız 
+
+
+#model inşası
+from sklearn.linear_model import LinearRegression #ob
+lr=LinearRegression()
+lr.fit(x_train,x_train) #biz burada eğitiyoruz. 
+#biz bir model oluşturmaya çalışıyoruz. X_train den Y_Traine bir prediction(tahmin) edecektir. 
+#daha önce de fit kullandık. modeli inşa etmeye çalışıyoruz. Train kümemiz bağmlı ve bağımszıdan oluşmaktadır. Y_train standardize edilmeiş haldedir. 
+
+#şimdi modeli uygulama zamanı geldi. 
+
+prediction=lr.predict(x_test)  #bize bir tahminde bulundu ve hiç bir veri vermedik. Farklı dünyalardan veriler bulunmamaktadır.  prediction =tahimin manasındadır. biz bu ismi verdik. 
+
+#bir sonrakinde görselleştirme yapıyoruz başarı nedir? başarım nasılsağlanır bakacağız.
+#veri görselleşirmesi ayrı bir iş alanı ve iş akışı olmakla beraber, Veri görselleştirme ayrı bir akışdır görsel bazlı bir iş akışı ile size kolayalık sağlamaktır. 
+#veriyi keşfetmek amaçlıyoruz. 
+
+#önce verleri sıralıyoruz. 
+x_train=x_train.sort_index();
+y_train=y_train.sort_index(); #ayrı ayrı srıalama yaptık. ayrı ayrı sıralamamız mümkün değil. biz burada index e göre sıralama yaptık ve her ayın karşılıklı eşleşmesi sağlanndı. 
+ 
+
+plt.plot(x_train,y_train) #verileri tamamen çizmiyoruz. rastgele seçilmiş %66 bir veri çizmi görüyoruz split edileriken rast gelen seçilerek bu ayarlamayı yaptıkk. 
+plt.plot(x_test, lr.predict(x_test))
+plt.title("Aylara göre satışlar")  #üste başlık koyar grafikte
+plt.xlabel("Aylar") #x eksenine başlık bırakır. 
+plt.ylabel("Satışlar") #y eksenine başlık bırakır.  
+'''
+bununla ilgili bazı  şeyler ebakalım
+title diye bir şey var. title başlık verebiliriz. 
+
+'''
 
 
 
-#Prof.Dr. Sadi Evren Şekerden alınmıştır. 
+
+
+
