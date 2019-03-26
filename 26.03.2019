@@ -1,0 +1,128 @@
+ython 3.7.2 (tags/v3.7.2:9a3ffc0492, Dec 23 2018, 22:20:52) [MSC v.1916 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> print(2+2);
+4
+>>> print(for(int i=9 to 100);
+	  
+SyntaxError: invalid syntax
+>>> print("omer dogu")
+	  
+omer dogu
+>>> clear
+	  
+Traceback (most recent call last):
+  File "<pyshell#3>", line 1, in <module>
+    clear
+NameError: name 'clear' is not defined
+>>> clc
+	  
+Traceback (most recent call last):
+  File "<pyshell#4>", line 1, in <module>
+    clc
+NameError: name 'clc' is not defined
+>>> quit
+	  
+Use quit() or Ctrl-Z plus Return to exit
+>>> exit
+	  
+Use exit() or Ctrl-Z plus Return to exit
+>>> python
+	  
+Traceback (most recent call last):
+  File "<pyshell#7>", line 1, in <module>
+    python
+NameError: name 'python' is not defined
+>>> help python
+	  
+SyntaxError: invalid syntax
+>>> 2*2
+	  
+4
+>>> 2+2
+	  
+4
+>>> 2+4
+	  
+6
+>>> 2*3+
+	  
+SyntaxError: invalid syntax
+>>> 
+	  
+>>> 2*3+2
+	  
+8
+>>> 2*(3+1)
+	  
+8
+>>> #klasik operatörleri kullanablriz.
+	  
+>>> x=10
+	  
+>>> y=20;
+	  
+>>> x+y
+	  
+30
+>>> #değişken ataması tip tanımlamadan yapabiliriz.
+	  
+>>> xyz #olmayan değişkene erişmek istediğimiz
+	  
+Traceback (most recent call last):
+  File "<pyshell#21>", line 1, in <module>
+    xyz #olmayan değişkene erişmek istediğimiz
+NameError: name 'xyz' is not defined
+>>>  #interpretd bir dildir. yorumlayıcı bir dil değildir.
+	  
+,
+>>> ,
+	  
+>>> vergi=18/100
+	  
+>>> #vergi =%18 olduğ
+	  
+>>> satis=154.32
+	  
+>>> vergi*satis
+	  
+27.777599999999996
+>>> #yuvarlamak için şöyle yaparız.
+	  
+>>> round(%)
+	  
+SyntaxError: invalid syntax
+>>> round(vergi*satis)
+	  
+28
+>>> round(vergi*satis)
+	  
+28
+>>> xyz=100;
+	  
+>>> xyz
+	  
+100
+>>> #interpreted bir dildir. Yorumlayıcı değildir. atandığı an değeri belirlenir.
+	  
+>>> vergi=%18
+	  
+SyntaxError: invalid syntax
+>>> vergi=10/100
+	  
+>>> satis=178.82
+	  
+>>> tax=satis*vergi
+	  
+>>> round(tax,2)
+	  
+17.88
+>>> round(tax)
+	  
+18
+>>> round(tax,100)
+	  
+17.882
+>>> round(tax,100)#100 basamak yuvarlama yapar.
+	  
+17.882
+>>> 
