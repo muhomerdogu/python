@@ -1,0 +1,24 @@
+#python döngü özelliğini göreceğiz. 
+#bir kodun belirli aralıkla tekrar tekrar iretasyona uğramasını sağlayacağız. 
+#if 'in altında belirli bloklar varken, klasik programalma dilinden gelenler, 
+i=1
+while i<10:
+    print(i)
+    i=i+1 #kaldırırısak sonsuz döngüye girer. 
+print("bitti")  #aaa hata verdi. i++ pythonda bulunmamaktadır. 
+
+#fibanocci serisi
+#bütün serinin toplamı kendinden önceki iki sayının toplamıdır. 
+#örnek: 0 1 1 2 3 5 8 13 21...n...etc..
+a,b=0,1  #anın içine 0 bye 1
+#a,b olsun ilki. Sonrası 
+#    c değeri olsun.
+
+#  a b
+while a<22:
+    print(a) 
+    c=a+b
+    a=b
+    b=c
+#c'yi hiç kullanmadan da yazabiliriz. 
+ 
