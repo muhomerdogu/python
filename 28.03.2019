@@ -1,0 +1,22 @@
+# -*- coding: utf-8 -*-
+"""
+Spyder Editor
+#omerdogu
+This is a temporary script file.
+"""
+x=int(input('Bir sayı giriniz:'))
+ 
+print(x)
+ 
+if x<200: #: sign important.
+    print("küçük")
+    print(x)
+    x=500
+elif x>500:
+    print("büyük")
+    print(x)
+else: 
+    print("arada")
+print("x'in yeni değeri :+str(x))
+
+
