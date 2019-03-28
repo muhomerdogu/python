@@ -1,0 +1,13 @@
+ #1den 100 kadar olan sayılar asal mı kontrol edelim?
+l=[]
+for i in range(1,100):
+    bolunurMu=False
+    for b in range(2,i): #range son sayıyı almaz.
+        if(i%b==0):
+            bolunurMu=True
+        else: 
+            print(i)
+            l.append(i)
+print(l) 
+            
+            
