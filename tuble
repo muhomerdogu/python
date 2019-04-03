@@ -1,0 +1,25 @@
+#1den 100 kadar olan sayılar asal mı kontrol edelim?
+#tupploo yapısını tahmin etmeye çalışacağız. 
+l=[1,2,3]
+#toappl için de () yapısın kullanılır. 
+t=(1,2,3) #bir tapple dir birdne fazla yapıyı tutarız. listelerden farklı bir şeyi yok. ancak bir farkı var. yani değiştrilmesi mümkün değil. T
+l[2]=10 
+print(l);
+# t[2]=10; TypeError: 'tuple' object does not support item assignment atamaz. bilgi değiştirilemez. 
+x,y,z=t;  #unpack yaptık şimdi ise aşağıda paketleryeceğiz. 3 
+print(x)
+print(z)
+z=10
+print(t) #z=10 olmadı. içerik 
+#şimdi yeniden paketlersem. 
+t=(x,y,z)
+print(t) #artık z değişmiştir.  inmuutuble yapısı önemlidir. java da da vardır. elemanları ile oynama yapamayız. Git sadece şu elemanı şu şekilde değiştir diyemeyiz. 
+#topple değiştirmemiz gereklidir. 
+v=([0,1,2,3,4],[5,6,7,8,9])
+print(v)
+v[0][1]=100
+print(v) #burada biz liste de değişiklik yaptık. biz listeyi değiştirmedik. iki tane pointer yaptık biris dğeişir diğeri değişmez 
+
+#tuple içine bakakrsak sadece farklı bellek açarak o bellekte yer değiştirebiliriz. 
+#tuple içne elemanlar atayarak o elemanarı değiştirebilriz. 
+#yukarıdaki değişiklik sadece liste içinde yapılıyor.  
