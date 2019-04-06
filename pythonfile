@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Apr  6 13:22:24 2019
+
+@author: OMER DOGU
+"""
+
+ #open dosya ilsmi içinkullanır.z
+ 
+f=open('omer.txt','w') #dosyayı oluşturduk ve yazmak için açtık. 
+f.write('OMER DOGU VE PYTHON')  #dosyanın içine yazdık. 
+f.close();  #dosyayı kapattık. 
+f=open('omer.txt','r')  #doyayı okumak için açtık. 
+print(f.read()) #dosyayı okuduk
+f.close(); #dosyayı kapattık 
+
+#readline satır satır yazıdrabiliriz. 
+#JSON dosya formatı çok gelişti. Javascript gelişmesi ile pratikleşmesi ile gelişti. 
+#pratik ve deneme yapmanız önemlidir. 
