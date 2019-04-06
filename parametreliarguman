@@ -1,0 +1,28 @@
+#package 
+# makine öğrenmesi konusunda paketleri öğreneceğiz basit bir model eklenir ve nasılyaparız ona bakarız. 
+#sonra da hatalara bakarız 
+#modulere nasıl girilir ona bakacağız. 
+# Fibonacci numbers module fibo py bir kütüphane getirmektir. 
+
+def fib(n):    # write Fibonacci series up to n
+    a, b = 0, 1
+    while a < n:
+        print(a, end=' ')
+        a, b = b, a+b
+    print()
+
+def fib2(n):   # return Fibonacci series up to n
+    result = []
+    a, b = 0, 1
+    while a < n:
+        result.append(a)
+        a, b = b, a+b
+    return result
+#amacımız daha sonra yazdığımız birincisinde ekrana bastırıyor fib2 ise
+    #bir listeye atıyor. 
+#ekip çalışması yaparken herkes biri birinin kodunu çağrırken sen şu fonksiyonu kullan şeklinde yapacağız. büyük nesne yazılımlarında nasıl yapılacağını öğeneceğiz. 
+#bir kütüphane oluşturup, oradan çağrılması ve bir değişiklik yapıldığında ilgili kütüphanede değişiklik yapılmasını sağlarız. 
+    #bir merkezden kontrol edilebilmesidir. 
+#hatta çok büyük kodlar varsa ayrı ayrı bölümlere ayırailir. a
+    #elimizde farklı kütüphanler olsun. 
+    
