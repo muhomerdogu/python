@@ -1,0 +1,32 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Apr  6 13:34:07 2019
+
+@author: OMER DOGU
+"""
+
+#geçerlikil alanı namespace ve scopes önemlidir. 
+def scope_test(): #bir değişken tanımlamış olamk her yerden erişilecek demek değildir. bazı değişkenler local tanımlanır. buradaki yerellik: global, bütün kodda, fonksiyonda veya class da geçerli olan local değişkenler oalbilir. pythonda blok indentetion ile belirtilir.  bu alandaki tanımlı olan şeyler. 
+    def do_local():
+        print("local spam",spam) #blok içinde geçerli olan yerde olur. 
+
+    def do_nonlocal():
+        nonlocal spam  #bu local değildir. genel scop test içnde geçerlidir. tanımlı olduğu yerde tanımlı olduğu yerde hale gelir. kapsayan fonskiyon her yerde tanımlıdır 
+        spam = "nonlocal spam"
+
+    def do_global():
+        global spam #bütüb kodda tanımlı hale gelir.  fonksiyonlar çağrılana kadar geçersizidir. 
+        spam = "global spam" 
+
+    spam = "test spam"
+    do_local()
+    print("After local assignment:", spam)
+    do_nonlocal()
+    print("After nonlocal assignment:", spam)
+    do_global()
+    print("After global assignment:", spam)
+
+scope_test()
+print("In global scope:", spam)  #kodu python sitesinden temin ettik!
+
+#özel bir kod değil. 
