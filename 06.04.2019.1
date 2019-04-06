@@ -1,0 +1,30 @@
+ #dictory bir sözlüktür.
+#key value anahtar değeri gibi bir ikili vardır. kv diye de görebiliriz çoğu yerde. amaç bir anahtar ile kayıt ederek, istendiğinde çağırmaktır. 
+#Mesela l=[1,19,3,2,1] listesindeki l[3]=? dediğinde ise dictinory de de bu mantık vardır. 
+
+tel = {'jack': 4098, 'sape': 4139} #jack karşılığı: 4098 imiş. 
+print(tel['jack']) #bunun karşılığı 4098 gelir. Sayılar yerine benim tanımladığım değişkenler yerine atıyorum. Benim key değerim benim key değerim stringler ilie gitmektedir. isimleri telefon numarası ataması yapabilir associate variable diye de geçer başka tanımlamalarda. 
+d=dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])#associate variable karşılık geliyor. 
+print(d)  #anahtarlar ve karşılığı vardır. python bunu verimli tutmayı garanti ediyor. Aranan verilere daha hızlı erişmektir. hash mantığı ile çalışır dictionary. anlamakta kalmayıp pratikte yapmak önemlidir. 
+ 
+#looping techniques mantığına gelelim. 
+for k, v in d.items():  #anahtar k ve v dir.k=anahtardır. v=valuedir. yukarıda atama işlemi var. 
+    print(k,v)
+    
+
+
+#enumurate bir nesne döndürür. nesne olarak tanımlandığında güzel sonuçlar elde ederiz. morted alıp sıralıyor. karşılaştırıalbilri olası gerekir. Küçüktür büyükür iş akışı olması gerekmektedir. bu olay yaratılmış olması gerekmekteid.r 
+print((1, 2, 5)              < (1, 2, 4,8)) #neden çünkü küçük değil.  ilk elemanı karşılaştırıyor sonra ikincisin karşılaştırıyor ve son olarak da diğerin 
+print([1, 2, 3]              < [1, 2, 4]) #sözlük sıralması deniyor. bu olaylara 
+print('ABC' < 'C' < 'Pascal' < 'Python')  #
+print((1, 2, 3, 4)           < (1, 2, 4))
+print((1, 2)                 < (1, 2, -1)) #burada 1,2 varken ikinci sıralı da ise (1,2, -1) var. -1 dikkate alınmaz karşılığı yok 
+print((1, 2, 3)             == (1.0, 2.0, 3.0))
+print((1, 2, ('aa', 'ab'))   < (1, 2, ('abc', 'a'), 4))
+print('ab'<'a')
+
+
+
+
+
+
