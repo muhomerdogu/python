@@ -1,0 +1,21 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Apr  6 12:23:48 2019
+
+@author: OMER DOGU
+"""
+
+import fibo #fibo.py isimlik kendi yazdığım dosyayı çağırıyorum. 
+import sys #sys sistem dosyasından ihraç etti. 
+
+print(fibo.fib(5))
+
+print("")
+
+print("Dosya ismi:"+sys.argv[0])
+print(fibo.fib2(int(sys.argv[1])))
+ 
+
+#bu yapı birden fazla python kodunu tek çatı altında topayabiliyoruz. imort ederken py yazmadan import edebiliriz. 
+#kütüphane ismine.fonkisyon şeklinde ulaşabiliriz. özel parametre tanımalamsı yapabiliriz. komut satırına eilen argv kullanırız. 
+#daha ilerleyen videolarda farklı yapılar apcağız.  
