@@ -1,0 +1,26 @@
+l=[1,2,3]   # liste
+t=(1,2,3) #tuble invetuble idi. yani 
+
+k={1,2,3,1,2,3,4,5,6,7,8} #kümeler set kümeler un order yani listeleme önemsizdir. kÜMENİN elemanı olması için. bir eleman birkere geçer. 
+
+print(l)
+print(t)
+print(k)
+#[1, 2, 3]
+#(1, 2, 3)
+#{1, 2, 3, 4, 5, 6, 7, 8}
+
+k2=set(l)
+k3=set([1,2,3,1,2,3,1,2,3,1,2,3,1,2,3])
+print(k2) #{1, 2, 3}
+print(k3)  #{1, 2, 3} çıktısını verir. set komutu ile bir şeyi kümeye çevirriri. 
+k4=(set('Bilgisayar Kavramları'))
+k5=set("ömerdoğu")
+print(k4)
+print(k5) #her harfi bir kere yazdı. birden fazla yazmad. 
+#{'ı', 'i', 'l', 'r', 'g', 'a', 'm', 'K', 'y', 'v', ' ', 's', 'B'}
+#{'u', 'r', 'ğ', 'm', 'o', 'd', 'e', 'ö'}
+print(k4|k5)   # set union birleşim operatörü birleştirme işlemi yapar  | bu işaret. {'ı', 'i', 'l', 'u', 'a', 'ğ', 'v', 'y', 'o', ' ', 's', 'B', 'r', 'g', 'm', 'K', 'd', 'e', 'ö'}
+print(k4-k5)  #set different küme farkı alır. 
+print(k4&k5) #küme kesişimi 
+print(k4^k5) #birinde var diğerinde yok birinde var diğerinde yok. ikisinden birinde olanı alıyor. iki difference birini alıyor. iki yönlü küme farkının küme birleşimi. kümler birden fazla yapıyı bir arada tutarız. kümelerde sıra önemsiz kümelerin kesişimi ve birleşimini tanımlayabiliriz kümelerin üzernde birden fazla kesim 
