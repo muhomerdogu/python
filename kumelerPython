@@ -1,0 +1,30 @@
+l=[1,2,3,1,2,3] #liste,
+t=(1,2,3,1,2,3) #Ttuble
+k={1,2,3,1,2,3,1,2,3,1,2,3}
+
+#küme kelimesi set kavramı curly bracket şeklinde gösterilir. 
+#tuple neden ihtiyaç var? birden fazla veriyi tutar. kümeler niye var? kümeler sırasızdır ama listeler sıralıdır. tuple hiç değişmez. 
+#kümelerde tekrar olmaz bir eleman bir kere geçer 
+
+print(l,"listeyi gösterir.")
+print(t)
+print(k,"kümede her eleman bir kere yazılır.")
+k2=set(l) #kümeye çevirdik 
+k3=set([1,2,3,1,32,3])
+print(k2)
+print(k3)
+k4=set("ÖMERFARUKDOĞU")
+k5=set("www.omerdogu.com")
+print(k4) 
+print(k5," #her eleman bir kere yazılır çünkü bu bir kümedir! hiç bir sıra önemi yoktur. #kümeler üzerinde tanımlı bazı operatörler vardır. ")
+print("")
+print(k4|k5,"birleştirme operatörümüz. sıra önemsizdir. |")
+print("")
+print(k4-k5,"sıra önemli küme farkıdır - ")
+print("")
+print(k4&k5,"küme kesişim o operatörümüz &")
+print(" ")
+print(k4|k5,"biride olup diğerinde olmayan birinde olup diğerinde olmayanı alıyor. ikisinden sadece birinde olanı alıyor.özel veya geçebilir ^")
+
+
+
