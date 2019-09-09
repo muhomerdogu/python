@@ -1,0 +1,25 @@
+
+
+
+#!python 
+#Fibonacci Sayıları: 
+#Dizinin ardışık iki terimin toplamı sonraki terimi verir. 
+
+a, b=0,1 #a ve b sayıların direk tanımadık ve değer atadık 
+while b<200:
+    print(b)
+    a,b=b,a+b  #a değeri byi ata ve b değerine de a+b toplamını ata. 
+"""
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+"""
