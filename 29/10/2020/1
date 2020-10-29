@@ -1,0 +1,27 @@
+>>> turtle.fd(100)
+>>> turtle.left(90)
+>>> turtle.fd(100)
+>>> turtle.left(90)
+>>> turtle.fd(100)
+>>> turtle.left(90)
+>>> turtle.fd(100)
+>>>
+>>> turtle.bgcolor("blue")
+>>> turtle.begin_fill()
+>>> turtle.begin_fill()
+>>> turtle.color("white","red")
+>>> turtle.fd(100)
+>>> turtle.left(120)
+>>> turtle.fd(100)
+>>> turtle.left(120)
+>>> turtle.fd(100)
+>>> turtle.end_fill()
+>>> #üçgen çizdirdik
+>>> 
+>>> print("OMER DOGU")
+OMER DOGU
+>>> type("omerdogu")
+<class 'str'>
+>>> type(1982)
+<class 'int'>
+>>> turtle.bgcolor("blue"
