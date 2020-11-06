@@ -1,0 +1,28 @@
+# -*- coding: utf-8 -*-
+"""
+Spyder Editor
+
+This is a temporary script file.
+"""
+
+""
+     
+sayi1=float (input("ilk sayiyi giriniz:"))
+sayi2=float(input("ikinci sayiyi giriniz:"))
+toplam=sayi1+sayi2
+print('iki sayinin toplami:'+str(toplam))
+
+def max(sayi1,sayi2):
+    if(sayi1>sayi2):
+        sonuc=sayi1
+    else:
+        sonuc=sayi2
+        return sonuc
+
+for i in range(20):
+    for j in range(3):
+        for k in range(4):
+            print(str(i)+" * "+str(j)+" * "+str(k)+"="+str(i*j*k))
+    
+    
+print(12*2)
